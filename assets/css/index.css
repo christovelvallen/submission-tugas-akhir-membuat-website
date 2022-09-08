@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+:root {
+    --blue: #0466c8;
+    --gray: #dee2e6;
+    --lightgray: #eee;
+    --white: #fff;
+    --black: #343a40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row-rev {
+    flex-direction: row-reverse;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.gap {
+    gap: 4rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0052a4;
+}
+
+.shadow {
+    box-shadow: 0 4px 12px rgb(0, 0, 0, 0.2);
+}
+
+.text-gray {
+    color: #9fa3a6;
+}
+
+.text-blue {
+    color: var(--blue);
+}
+
+/* ===================================== */
+/* navigation */
+.nav {
+    padding: 1rem 6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.nav-menu li {
+    display: inline;
+    padding-left: 1rem;
+}
+
+.nav-menu li > a:hover {
+    color: var(--blue);
+}
+
+.nav-menu button {
+    width: 90px;
+    padding: 0.5rem 0;
+    border: 2px solid var(--blue);
+}
+
+.nav-menu li:nth-child(4) > button {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.nav-menu li:nth-child(4) > button:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.nav-menu li:nth-child(5) > button:hover {
+    border: 2px solid #0052a4;
+}
+
+/* hamburger menu */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    background-color: var(--black);
+    width: 35px;
+    height: 4px;
+    margin: 5px;
+    border-radius: 4px;
+    transition: 200ms;
+}
+
+.hamburgerMenuActive span:nth-child(1) {
+    transform: rotate(-45deg) translate(-4px, 9px);
+}
+
+.hamburgerMenuActive span:nth-child(3) {
+    transform: rotate(45deg) translate(-4px, -9px);
+}
+
+.hamburgerMenuActive span:nth-child(2) {
+    transform: scale(0);
+}
+
+.hamburgerMenuActive span {
+    background-color: var(--blue);
+}
+
+/* ===================================== */
+/* hero */
+.hero {
+    padding: 8rem 6rem 4rem 6rem;
+    background-color: var(--white);
+}
+
+.hero-text > span {
+    display: block;
+}
+
+.hero-text > span:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hero-text > span:nth-child(2) {
+    font-size: 2.25em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-text button {
+    width: 190px;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.hero-img {
+    width: 550px;
+}
+
+/* ===================================== */
+/* about */
+.about {
+    padding: 8rem 6rem;
+    background-image: linear-gradient(var(--white), var(--lightgray));
+}
+
+.about-items {
+    margin-bottom: 4rem;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.about-text h2 {
+    border-left: 4px solid var(--blue);
+    padding-left: 1rem;
+}
+
+.about-text p {
+    padding-top: 0.5rem;
+    padding-left: calc(1rem + 4px);
+    line-height: 1.5rem;
+    opacity: 0.8;
+}
+
+.about-text button {
+    margin-left: calc(1rem + 4px);
+    width: 130px;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.about-text a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.about-img {
+    width: 300px;
+}
+
+/* ===================================== */
+/* kelas */
+.kelas {
+    background-color: var(--white);
+    padding: 6rem;
+    text-align: center;
+}
+
+.kelas-items {
+    background-image: linear-gradient(var(--gray), var(--white));
+    width: 250px;
+    height: 300px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 1rem;
+    transition: 150ms;
+    cursor: pointer;
+}
+
+.kelas-items img {
+    margin-top: 1rem;
+    transform: scale(0.8);
+}
+
+.kelas-items:hover {
+    transform: scale(1.02);
+    background-image: linear-gradient(#ced4da, var(--gray));
+}
+
+/* ===================================== */
+/* biodata */
+.bio {
+    background-color: var(--lightgray);
+    padding: 6rem;
+}
+
+.bio-img {
+    width: 600px;
+    text-align: center;
+}
+
+.bio-items {
+    border-radius: 8px;
+}
+
+.bio-cards {
+    width: 300px;
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.bio-cards > img {
+    border-radius: 50%;
+    background-color: var(--white);
+    transform: scale(0.9);
+}
+
+.bio-cards .social-media {
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.bio-details {
+    width: 0px;
+    background-color: var(--white);
+    padding: 2rem 0 2rem 0.8rem;
+    border-radius: 8px 0 0 8px;
+    overflow: hidden;
+    position: relative;
+    transition: 500ms;
+}
+
+.bio-details h1 {
+    margin-bottom: 0.5rem;
+}
+
+.bio-details h4 {
+    border-left: 4px solid var(--blue);
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+}
+
+.bio-details p {
+    padding-left: calc(1rem + 4px);
+    opacity: 0.8;
+    width: 300px;
+    line-height: 1.5rem;
+}
+
+#btnOpenBioDetails {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: bold;
+    color: var(--blue);
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 500ms;
+    z-index: 1;
+}
+
+.bioDetailsActive > #btnOpenBioDetails {
+    transform: rotate(180deg);
+}
+
+.bioDetailsActive {
+    width: 450px;
+    padding-left: 2rem;
+}
+/* ===================================== */
+/* footer */
+.footer {
+    background-color: var(--white);
+    text-align: center;
+    padding: 4rem 2rem;
+    line-height: 2rem;
+}
+
+/* ===================================== */
+/* responsive */
+@media screen and (max-width: 1200px) {
+    .nav,
+    .hero,
+    .about,
+    .kelas,
+    .bio {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    /* navigation */
+    .hamburger-menu {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 3.5rem;
+        right: 1.2rem;
+        background-color: var(--white);
+        box-shadow: 0 4px 12px rgb(0, 0, 0, 0.2);
+        width: 0px;
+        height: 350px;
+        padding: 1rem 0;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: 200ms;
+    }
+
+    .nav-menu li {
+        display: block;
+        padding: 1rem;
+        text-align: right;
+    }
+
+    .nav-menu button {
+        width: 100px;
+    }
+
+    .navMenuActive {
+        width: 250px;
+        padding: 1rem;
+    }
+
+    /* hero */
+
+    .hero .flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* about */
+    .about-items {
+        flex-wrap: wrap;
+    }
+
+    /* bio */
+    .bio .flex {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bio-items {
+        flex-direction: column-reverse;
+        width: 400px;
+    }
+
+    .bio-cards,
+    .bio-details {
+        width: 100%;
+    }
+
+    .bio-cards {
+        border-radius: 8px 8px 0 0;
+        z-index: 1;
+    }
+
+    .bio-details {
+        border-radius: 0 0 8px 8px;
+        padding: 2rem;
+        margin-top: -355px;
+        overflow: auto;
+    }
+
+    .bio-details p {
+        width: 100%;
+    }
+
+    #btnOpenBioDetails {
+        top: 350px;
+        left: calc(50% - 5px);
+        transform: rotate(-90deg);
+    }
+
+    .bioDetailsActive > #btnOpenBioDetails {
+        transform: rotate(90deg);
+    }
+
+    .bioDetailsActive {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nav,
+    .hero,
+    .about,
+    .kelas,
+    .bio {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero .flex {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .hero-text span:nth-child(1) {
+        font-size: 1em;
+    }
+
+    .bio-items {
+        width: 90%;
+    }
+}
